@@ -1,34 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança Digital - Guia Prático</title>
-    <!-- Ligação ao ficheiro de estilos CSS externo -->
+    <title>Seguranca Digital - Guia Pratico</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
         
-        <!-- Cabeçalho -->
         <header>
-            <h1>🛡️ Internet Segura</h1>
-            <p>O seu guia simples para usar o telemóvel e o computador sem medo.</p>
+            <h1> Internet Segura</h1>
+            <p>O seu guia simples para usar o celular e o computador sem medo.</p>
         </header>
 
-        <!-- Painel de Acessibilidade -->
-        <div class="painel-acessibilidade" aria-label="Ajustes de visualização">
-            <button class="btn" onclick="alterarTamanhoFonte(2)" aria-label="Aumentar letra">
+        <div class="painel-acessibilidade" aria-label="Ajustes de visualizacao">
+            <button class="btn btn-acessibilidade" onclick="alterarTamanhoFonte(2)" aria-label="Aumentar letra">
                 <span style="font-size: 1.2em;">A+</span> Aumentar Letra
             </button>
-            <button class="btn" onclick="alterarTamanhoFonte(-2)" aria-label="Diminuir letra">
+            <button class="btn btn-acessibilidade" onclick="alterarTamanhoFonte(-2)" aria-label="Diminuir letra">
                 <span style="font-size: 0.8em;">A-</span> Diminuir Letra
             </button>
-            <button class="btn" onclick="alternarAltoContraste()" id="btn-contraste">
-                🌗 Alto Contraste
+            <button class="btn btn-acessibilidade" onclick="alternarAltoContraste()" id="btn-contraste">
+                 Alto Contraste
             </button>
         </div>
 
-        <!-- Alerta Geral -->
-        <div style="background-color: var(--cor-alerta
+        <div class="alerta-geral">
+            <h3> Lembrete Importante:</h3>
+            <p>Bancos, empresas e orgaos do governo nunca vao pedir suas senhas ou codigos de confirmacao por ligacao ou mensagem de texto!</p>
+        </div>
+
+        <main class="conteudo-principal">
+            <p class="instrucao">Leia a situacao abaixo e selecione a opcao correta:</p>
+            
+            <div class="caixa-mensagem" id="texto-cenario">
+                Carregando simulacao...
+            </div>
+
+            <button class="btn btn-golpe" onclick="verificarResposta(true)"> GOLPE!</button>
+            <button class="btn btn-seguro" onclick="verificarResposta(false)"> SEGURO</button>
+
+            <div id="caixa-resultado" class="resultado"></div>
+            
+            <button id="btn-proxima" class="btn btn-proximo" onclick="proximoCenario()">Avancar para o proximo </button>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
