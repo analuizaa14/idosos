@@ -1,168 +1,90 @@
-/* Variáveis de cores para facilitar o modo de alto contraste */
-:root {
-    --bg-cor: #f7f9fc;
-    --texto-cor: #222222;
-    --container-bg: #ffffff;
-    --borda-cor: #cccccc;
-    --alerta-bg: #fff3cd;
-    --alerta-borda: #ffc107;
-    --mensagem-bg: #f0f4f8;
-    --mensagem-borda: #d9e2ec;
+/* Configuracoes Gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333333;
+    transition: all 0.3s ease;
+    font-size: 18px; 
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+/* Botoes de Acessibilidade */
+.controles-acessibilidade {
+    margin-top: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Area de Conteudo */
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;
 }
 
 /* Modo de Alto Contraste */
 body.alto-contraste {
-    --bg-cor: #000000;
-    --texto-cor: #ffffff;
-    --container-bg: #121212;
-    --borda-cor: #ffffff;
-    --alerta-bg: #332b00;
-    --alerta-borda: #ffd700;
-    --mensagem-bg: #1e1e1e;
-    --mensagem-borda: #ffffff;
+    background-color: #000000;
+    color: #ffff00;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-cor);
-    color: var(--texto-cor);
-    margin: 0;
-    padding: 20px;
-    font-size: 24px; /* Tamanho base ideal para idosos */
-    transition: font-size 0.2s, background-color 0.3s, color 0.3s;
+body.alto-contraste main {
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px #ffff00;
+    color: #ffff00;
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    background: var(--container-bg);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    border: 2px solid var(--borda-cor);
+body.alto-contraste header {
+    background-color: #000000;
+    color: #ffff00;
+    border-bottom: 3px solid #ffff00;
 }
 
-header h1 {
-    color: #b91c1c;
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 0;
+body.alto-contraste button {
+    background-color: #000000;
+    color: #ffff00;
+    border: 2px solid #ffff00;
 }
 
-header p {
-    text-align: center;
-    font-size: 0.9em;
-    color: var(--texto-cor);
-}
-
-.painel-acessibilidade {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.alerta-geral {
-    background-color: var(--alerta-bg);
-    border-left: 8px solid var(--alerta-borda);
-    padding: 15px 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-
-.alerta-geral h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.instrucao {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.caixa-mensagem {
-    background-color: var(--mensagem-bg);
-    border: 1px solid var(--mensagem-borda);
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    font-style: italic;
-    font-size: 1.1em;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.1s;
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.btn-acessibilidade {
-    background-color: #4b5563;
-    color: white;
-    width: auto;
-    padding: 10px 15px;
-    font-size: 0.8em;
-}
-
-.btn-golpe {
-    background-color: #dc2626;
-    color: white;
-}
-
-.btn-seguro {
-    background-color: #16a34a;
-    color: white;
-}
-
-.btn-proximo {
-    background-color: #2563eb;
-    color: white;
-    display: none;
-    margin-top: 20px;
-}
-
-.resultado {
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 20px;
-    display: none;
-    font-weight: bold;
-    line-height: 1.4;
-}
-
-.correto {
-    background-color: #d1fae5;
-    color: #065f46;
-    border: 2px solid #10b981;
-}
-
-.errado {
-    background-color: #fee2e2;
-    color: #991b1b;
-    border: 2px solid #ef4444;
-}
-
-body.alto-contraste .correto {
-    background-color: #004d00;
-    color: #ffffff;
-    border-color: #00ff00;
-}
-
-body.alto-contraste .errado {
-    background-color: #4d0000;
-    color: #ffffff;
-    border-color: #ff0000;
+body.alto-contraste button:hover {
+    background-color: #ffff00;
+    color: #000000;
 }

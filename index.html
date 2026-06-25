@@ -1,53 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguranca Digital - Guia Pratico</title>
+    <title>Prevencao contra Golpes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        
-        <header>
-            <h1> Internet Segura</h1>
-            <p>O seu guia simples para usar o celular e o computador sem medo.</p>
-        </header>
-
-        <div class="painel-acessibilidade" aria-label="Ajustes de visualizacao">
-            <button class="btn btn-acessibilidade" onclick="alterarTamanhoFonte(2)" aria-label="Aumentar letra">
-                <span style="font-size: 1.2em;">A+</span> Aumentar Letra
-            </button>
-            <button class="btn btn-acessibilidade" onclick="alterarTamanhoFonte(-2)" aria-label="Diminuir letra">
-                <span style="font-size: 0.8em;">A-</span> Diminuir Letra
-            </button>
-            <button class="btn btn-acessibilidade" onclick="alternarAltoContraste()" id="btn-contraste">
-                 Alto Contraste
-            </button>
+    <header>
+        <h1>Guia de Seguranca Digital para Idosos</h1>
+        <div class="controles-acessibilidade">
+            <button id="btn-contraste">Alto Contraste</button>
+            <button id="btn-aumentar-letra">Aumentar Letra (+)</button>
+            <button id="btn-diminuir-letra">Diminuir Letra (-)</button>
         </div>
+    </header>
 
-        <div class="alerta-geral">
-            <h3> Lembrete Importante:</h3>
-            <p>Bancos, empresas e orgaos do governo nunca vao pedir suas senhas ou codigos de confirmacao por ligacao ou mensagem de texto!</p>
-        </div>
+    <main id="conteudo">
+        <section>
+            <h2>Como se proteger na internet e no telefone</h2>
+            <p>Muitos criminosos tentam enganar pessoas oferecendo falsos premios ou pedindo dinheiro urgentemente. Veja como se proteger:</p>
+            <ul>
+                <li>Nunca passe senhas de banco por telefone ou mensagens. Os bancos nunca pedem sua senha.</li>
+                <li>Desconfie de promessas de dinheiro facil ou sorteios nos quais voce nao participou.</li>
+                <li>Se um parente pedir dinheiro pelo aplicativo de mensagens, ligue para ele antes de enviar qualquer valor.</li>
+                <li>Nao clique em links desconhecidos recebidos por mensagem ou email.</li>
+                <li>Nao entregue seu cartao de banco para desconhecidos, mesmo que digam ser do banco.</li>
+            </ul>
+        </section>
 
-        <main class="conteudo-principal">
-            <p class="instrucao">Leia a situacao abaixo e selecione a opcao correta:</p>
-            
-            <div class="caixa-mensagem" id="texto-cenario">
-                Carregando simulacao...
-            </div>
-
-            <button class="btn btn-golpe" onclick="verificarResposta(true)"> GOLPE!</button>
-            <button class="btn btn-seguro" onclick="verificarResposta(false)"> SEGURO</button>
-
-            <div id="caixa-resultado" class="resultado"></div>
-            
-            <button id="btn-proxima" class="btn btn-proximo" onclick="proximoCenario()">Avancar para o proximo </button>
-        </main>
-
-    </div>
+        <section>
+            <h2>Contatos Uteis e Emergencia</h2>
+            <p>Se voce acha que caiu em um golpe, procure ajuda imediatamente:</p>
+            <ul>
+                <li>Ligue para o seu banco pelo numero que esta atras do seu cartao e peca para bloquear sua conta.</li>
+                <li>Faca um Boletim de Ocorrencia na delegacia mais proxima.</li>
+                <li>Disque 190 em caso de emergencia policial.</li>
+            </ul>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
