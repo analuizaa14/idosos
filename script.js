@@ -30,3 +30,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ... [SEU CÓDIGO EXISTENTE AQUI] ...
+
+    // ========================
+    // Lógica do Modal
+    // ========================
+    const modal = document.getElementById('aviso-modal');
+    const btnFechar = document.querySelector('.fechar');
+
+    // Abre o modal automaticamente 1 segundo após a página carregar
+    setTimeout(function() {
+        modal.style.display = 'flex';
+    }, 1000);
+
+    // Fecha o modal ao clicar no botão 'X'
+    btnFechar.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Fecha o modal se o usuário clicar fora da caixa de conteúdo
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
